@@ -2,7 +2,7 @@ import React from "react";
 import moment from "moment";
 
 export default function Message(props) {
-  console.log(props);
+  // console.log(props);
   const name = "nick"
 
   const monthNow = moment().format('MMMM');
@@ -10,12 +10,12 @@ export default function Message(props) {
   const monthAndYearNow = moment().format('YYYYMM');
   const startOfMonth = moment(monthAndYearNow).startOf('month').format('YYYYMMDD');
   const endOfMonth = moment(monthAndYearNow).endOf('month').format('YYYYMMDD');
-  console.log(`  monthNow ${monthNow} 
-  yearNow ${yearNow} 
-  monthAndYearNow ${monthAndYearNow} 
-  startOfMonth ${startOfMonth} 
-  endOfMonth ${endOfMonth}`
-  );
+  // console.log(`  monthNow ${monthNow} 
+  // yearNow ${yearNow} 
+  // monthAndYearNow ${monthAndYearNow} 
+  // startOfMonth ${startOfMonth} 
+  // endOfMonth ${endOfMonth}`
+  // );
   
   return (
     <>
