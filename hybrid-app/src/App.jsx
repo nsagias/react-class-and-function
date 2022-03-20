@@ -23,11 +23,6 @@ class App extends React.Component {
   }
 
   handleSetDate = (event, startOfMonth, endOfMonth) => {
-    // const monthNow = moment().format('MMMM');
-    // const yearNow  = moment().format('YYYY');
-    // const monthAndYearNow = moment().format('YYYYMM');
-    // const startOfMonth = moment(monthAndYearNow).startOf('month').format('YYYYMMDD');
-    // const endOfMonth = moment(monthAndYearNow).endOf('month').format('YYYYMMDD');
     this.setState(() => ({ dateFrom: startOfMonth}));
     this.setState(() => ({ dateTo: endOfMonth}));
   }
