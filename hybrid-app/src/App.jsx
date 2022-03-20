@@ -9,7 +9,9 @@ class App extends React.Component {
     this.state = { 
       isShowMessage: true,
       messageList: [],
-      messageListItem: {}
+      messageListItem: {},
+      dateFfom: "",
+      dateTo: ""
     };
   }
 
