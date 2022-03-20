@@ -38,9 +38,6 @@ class App extends React.Component {
         <button onClick={this.handleShowMessage} type="button">
           Show Messages
         </button>
-        {/* <button onClick={this.handleSetDate} type="button">
-          Set date
-        </button> */}
         <Message 
           setDate={this.handleSetDate}
           isShowMessage={this.state.isShowMessage}
