@@ -1,8 +1,8 @@
 import React from "react";
 
-export default function Message () {
-  const message = "Hello from Message component";
+export default function Message(props) {
+  console.log(props.message);
   return (
-    <div>{message}</div>
+    <h1>{props.message}</h1>
   );
 }

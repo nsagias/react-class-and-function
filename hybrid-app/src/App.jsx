@@ -7,8 +7,7 @@ class App extends React.Component {
     const helloWorld = "Hello World!!";
     return (
       <div>
-        <h1>{helloWorld}</h1>
-        <Message />
+        <Message message={helloWorld}/>
       </div>
     );
   }
