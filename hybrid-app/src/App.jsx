@@ -7,9 +7,9 @@ class App extends React.Component {
     super(props);
     
     this.state = { 
-      isShowMessages: true,
-      messagesList: [],
-      messagesListItem: {}
+      isShowMessage: true,
+      messageList: [],
+      messageListItem: {}
     };
   }
 
