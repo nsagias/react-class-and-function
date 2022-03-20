@@ -1,8 +1,9 @@
-import React from "react";
+import React, {useState} from "react";
 import moment from "moment";
 
 export default function Message(props) {
-  // console.log(props);
+  console.log(props);
+
   const name = "nick"
 
   const monthNow = moment().format('MMMM');
@@ -16,7 +17,9 @@ export default function Message(props) {
   // startOfMonth ${startOfMonth} 
   // endOfMonth ${endOfMonth}`
   // );
-  
+
+  const [date, setDate] = useState({startOfMonth, endOfMonth})
+  // console.log("xxx ",date)
   return (
     <>
       <div>
@@ -27,6 +30,7 @@ export default function Message(props) {
           </>
         ): null}
       <button onClick={() => props.messageFunction(name)}>Hello function</button> 
+      <button onClick={(event) => props.setDate(event.preventDefault(),date.startOfMonth, date.endOfMonth )}>Set Date</button> 
       </div>
     </>
   );

@@ -22,14 +22,12 @@ class App extends React.Component {
     console.log("Handle-Show-Message:",this.state)
   }
 
-
-  
-  handleSetDate = () => {
-    const monthNow = moment().format('MMMM');
-    const yearNow  = moment().format('YYYY');
-    const monthAndYearNow = moment().format('YYYYMM');
-    const startOfMonth = moment(monthAndYearNow).startOf('month').format('YYYYMMDD');
-    const endOfMonth = moment(monthAndYearNow).endOf('month').format('YYYYMMDD');
+  handleSetDate = (event, startOfMonth, endOfMonth) => {
+    // const monthNow = moment().format('MMMM');
+    // const yearNow  = moment().format('YYYY');
+    // const monthAndYearNow = moment().format('YYYYMM');
+    // const startOfMonth = moment(monthAndYearNow).startOf('month').format('YYYYMMDD');
+    // const endOfMonth = moment(monthAndYearNow).endOf('month').format('YYYYMMDD');
     this.setState(() => ({ dateFrom: startOfMonth}));
     this.setState(() => ({ dateTo: endOfMonth}));
   }
@@ -45,10 +43,11 @@ class App extends React.Component {
         <button onClick={this.handleShowMessage} type="button">
           Show Messages
         </button>
-        <button onClick={this.handleSetDate} type="button">
+        {/* <button onClick={this.handleSetDate} type="button">
           Set date
-        </button>
+        </button> */}
         <Message 
+          setDate={this.handleSetDate}
           isShowMessage={this.state.isShowMessage}
           messageObject={helloWorldObject}
           messageArray={helloWorldArrayOfObject}
