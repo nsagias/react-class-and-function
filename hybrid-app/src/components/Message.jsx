@@ -2,6 +2,7 @@ import React from "react";
 
 export default function Message(props) {
   console.log(props);
+  const name = "nick"
   return (
     <>
       <div>
@@ -11,7 +12,7 @@ export default function Message(props) {
           <h1>{props.messageArray[0].message}</h1>
           </>
         ): null}
-      <button onClick={props.messageFunction}>Hello function</button> 
+      <button onClick={() => props.messageFunction(name)}>Hello function</button> 
       </div>
     </>
   );

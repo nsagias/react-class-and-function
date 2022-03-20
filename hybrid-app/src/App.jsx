@@ -21,7 +21,7 @@ class App extends React.Component {
   render() {
     const helloWorldObject = { message: "Hello World Object!!"};
     const helloWorldArrayOfObject = [{ message: "Hello World Array of Objects!!"}];
-    const handleHelloFunction = () => console.log("Hello Function");
+    const handleHelloFunction = (name) => console.log("Hello Function", name);
     
     return (
       <div className="App">
