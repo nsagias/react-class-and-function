@@ -4,14 +4,16 @@ import Message from "./components/Message";
 
 class App extends React.Component {
   render() {
-    const helloWorld = { message: "Hello World!!"};
-    const handleHello = () => console.log("Hello Function");
+    const helloWorldObject = { message: "Hello World!!"};
+    const helloWorldArray = [{ message: "Hello World!!"}];
+    const handleHelloFunction = () => console.log("Hello Function");
   
     return (
       <div>
         <Message 
-           message={helloWorld}
-           fnMessage={handleHello}
+          messageObject={helloWorldObject}
+          messageArray={helloWorldArray}
+          messageFunction={handleHelloFunction}
         />
       </div>
     );
