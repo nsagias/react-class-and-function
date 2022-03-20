@@ -6,20 +6,11 @@ export default function Message(props) {
 
   const name = "nick"
 
-  const monthNow = moment().format('MMMM');
-  const yearNow  = moment().format('YYYY');
   const monthAndYearNow = moment().format('YYYYMM');
   const startOfMonth = moment(monthAndYearNow).startOf('month').format('YYYYMMDD');
   const endOfMonth = moment(monthAndYearNow).endOf('month').format('YYYYMMDD');
-  // console.log(`  monthNow ${monthNow} 
-  // yearNow ${yearNow} 
-  // monthAndYearNow ${monthAndYearNow} 
-  // startOfMonth ${startOfMonth} 
-  // endOfMonth ${endOfMonth}`
-  // );
-
   const [date, setDate] = useState({startOfMonth, endOfMonth})
-  // console.log("xxx ",date)
+
   return (
     <>
       <div>
