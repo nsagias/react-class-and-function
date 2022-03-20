@@ -28,16 +28,13 @@ class App extends React.Component {
         <button onClick={this.handleShowMessage} type="button">
           Show Messages
         </button>
-
-        { this.state.isShowMessage 
-          && this.state.isShowMessage 
-          ? ( <Message 
-                messageObject={helloWorldObject}
-                messageArray={helloWorldArrayOfObject}
-                messageFunction={handleHelloFunction}
-              /> )
-          : ( <h1>No Messages</h1>)
-        }
+        <Message 
+          isShowMessage={this.state.isShowMessage}
+          messageObject={helloWorldObject}
+          messageArray={helloWorldArrayOfObject}
+          messageFunction={handleHelloFunction}
+        /> 
+        <h1>No Messages</h1>
       </div>
     );
   }
