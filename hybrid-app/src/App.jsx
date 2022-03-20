@@ -15,13 +15,14 @@ class App extends React.Component {
 
   handleShowMessage = () => {
     this.setState(state => ({ isShowMessage: !state.isShowMessage}));
+    console.log("Handle-Show-Message:",this.state)
   }
 
   render() {
     const helloWorldObject = { message: "Hello World Object!!"};
     const helloWorldArrayOfObject = [{ message: "Hello World Array of Objects!!"}];
     const handleHelloFunction = () => console.log("Hello Function");
-  
+    
     return (
       <div className="App">
         <button onClick={this.handleShowMessage} type="button">
