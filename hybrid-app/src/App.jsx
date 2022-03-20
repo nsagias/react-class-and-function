@@ -4,6 +4,10 @@ import Message from "./components/Message";
 import moment from "moment";
 
 
+const monthAndYearNow = moment().format('YYYYMM');
+const startOfMonth = moment(monthAndYearNow).startOf('month').format('YYYYMMDD');
+const endOfMonth = moment(monthAndYearNow).endOf('month').format('YYYYMMDD');
+
 class App extends React.Component {
   constructor(props) {
     super(props);
@@ -12,8 +16,8 @@ class App extends React.Component {
       isShowMessage: true,
       messageList: [],
       messageListItem: {},
-      dateFrom: "" ,
-      dateTo: ""
+      dateFrom: "" || startOfMonth,
+      dateTo: "" || endOfMonth
     };
   }
 
