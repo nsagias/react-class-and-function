@@ -23,7 +23,11 @@ class App extends React.Component {
     const handleHelloFunction = () => console.log("Hello Function");
   
     return (
-      <div>
+      <div className="App">
+        <button onClick={this.handleShowMessage} type="button">
+          Show Messages
+        </button>
+
         { this.state.isShowMessage 
           && this.state.isShowMessage 
           ? ( <Message 
