@@ -13,6 +13,10 @@ class App extends React.Component {
     };
   }
 
+  handleShowMessage = () => {
+    this.setState(state => ({ isShowMessage: !state.isShowMessage}));
+  }
+
   render() {
     const helloWorldObject = { message: "Hello World Object!!"};
     const helloWorldArrayOfObject = [{ message: "Hello World Array of Objects!!"}];
