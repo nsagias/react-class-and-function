@@ -24,11 +24,14 @@ class App extends React.Component {
   
     return (
       <div>
-        <Message 
-          messageObject={helloWorldObject}
-          messageArray={helloWorldArrayOfObject}
-          messageFunction={handleHelloFunction}
-        />
+        {this.state.isShowMessage 
+          ? ( <Message 
+              messageObject={helloWorldObject}
+              messageArray={helloWorldArrayOfObject}
+              messageFunction={handleHelloFunction}
+              /> )
+          : ( <h1>No Messages</h1>)
+        }
       </div>
     );
   }
