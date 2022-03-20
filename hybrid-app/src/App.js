@@ -3,9 +3,10 @@ import './App.css';
 
 class App extends React.Component {
   render() {
+    const helloWorld = "Hello World!!";
     return (
       <div>
-        <h1>Hello World!!</h1>
+        <h1>{helloWorld}</h1>
       </div>
     );
   }
