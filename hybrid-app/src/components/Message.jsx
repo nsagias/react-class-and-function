@@ -1,7 +1,8 @@
 import React from "react";
 
 export default function Message () {
-  return(
-    <></>
+  const message = "Hello from Message component";
+  return (
+    <div>{message}</div>
   );
 }

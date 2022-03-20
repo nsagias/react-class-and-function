@@ -1,5 +1,6 @@
 import React from "react";
 import './App.css';
+import Message from "./components/Message";
 
 class App extends React.Component {
   render() {
@@ -7,6 +8,7 @@ class App extends React.Component {
     return (
       <div>
         <h1>{helloWorld}</h1>
+        <Message />
       </div>
     );
   }
