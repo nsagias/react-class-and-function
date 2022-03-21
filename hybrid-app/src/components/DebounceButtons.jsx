@@ -9,7 +9,7 @@ export default function DebounceButton () {
 
   return (
     <>
-      <button>D-Button</button>
+      <button onClick={onClickleDebounceButton}>D-Button</button>
     </>
   );
 }

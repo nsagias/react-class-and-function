@@ -2,6 +2,7 @@ import React from "react";
 import './App.css';
 import Message from "./components/Message";
 import moment from "moment";
+import DebounceButton from "./components/DebounceButtons";
 
 
 const monthAndYearNow = moment().format('YYYYMM');
@@ -42,6 +43,7 @@ class App extends React.Component {
         <button onClick={this.handleShowMessage} type="button">
           Show Messages
         </button>
+        <DebounceButton />
         <Message 
           setDate={this.handleSetDate}
           isShowMessage={this.state.isShowMessage}
